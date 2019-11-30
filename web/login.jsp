@@ -1,12 +1,9 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Games Plaza</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JSP Page</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png" type="image/icon">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
@@ -42,58 +39,34 @@
         </div>
     </header>
 
-    <div class="hero">
-        <div class="contenedor-hero">
-            <h1>Games Plaza</h1>
-            <p><i class="fas fa-map-marker-alt"></i>Cd. Obregón, Sonora</p>
-            <a href="contacto.jsp" class="boton">Contactar</a>
+    <div class="formulario">
+        <form class="form-signin">
+        <img class="mb-4" src="img/logo_control.png" width="305px" alt="">
+        <h1 class="h3 mb-3 font-weight-normal title">Iniciar Sesión</h1>
+        <label for="inputEmail" class="sr-only">Correo</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="">
+
+        <div class="checkbox mb-3 text-center">
+            <label>
+                <input type="checkbox" value="remember-me"> Recuerdame
+            </label>
         </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+    </form>
+
     </div>
+    
 
-    <div class="contenedor-identidad">
-        <h3>¿Quiénes somos?</h3>
-        <p>
-            Somos una empresa dedicada a la venta de videojuegos para múltiples consolas, desde los más clásicos hasta los más recientes y populares, pero no solo nos limitamos a eso, sino que también nos dedicamos a la venta de consolas, disponemos de una gran variedad de accesorios y figuras de colección, además de que brindamos servicio de reparación a consolas que han sido dañadas. 
-        </p>    
-    </div>
 
-    <div class="productos">
-
-        <h2>Productos</h2>
-
-        <div class="lista-productos contenedor">
-            <div class="articulo funkos">
-               <a href="#">Funkos</a>
-               <img src="img/funkos.jpg" alt="Funkos">
-           </div>
-           <div class="articulo accesorios">
-              <a href="#">Accesorios</a>
-              <img src="img/accesorios.jpg" alt="Accesorios">
-          </div>
-          <div class="articulo peluche">
-              <a href="#">Peluches</a>
-              <img src="img/peluches.jpg" alt="Peluches">
-          </div>
-          <div class="articulo consolas">
-              <a href="#">Consolas</a>
-              <img src="img/consolas.jpg" alt="Consolas">
-          </div>
-          <div class="articulo videojuego">
-              <a href="#">Videojuegos</a>
-              <img src="img/videojuegos.jpg" alt="Videojuegos">
-          </div>
-          <div class="articulo mochilas">
-           <a href="#">Mochilas</a>
-           <img src="img/mochilas.jpg" alt="Mochilas">
-       </div>
-   </div>
-</div>
-
-<footer class="footer">
+<footer class="footer-login">
     <div class="social-media-icon">
         <a href="https://www.facebook.com/gamesplazaobregon/" target="_blank"><i class="fab fa-facebook-square"></i></a>
         <p>&copy Games Plaza 2019. Todos los derechos reservados.</p>
     </div>
+
 </footer>
 
 <script src="https://kit.fontawesome.com/90570fcca5.js" crossorigin="anonymous"></script>

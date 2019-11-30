@@ -107,7 +107,7 @@ h1, h3 {
 
 .contenedor-identidad {
     width: 100%;
-    padding: 5rem;
+    padwading: 5rem;
     color: white;
     background-color: var(--primaryColor);
 }
@@ -139,6 +139,12 @@ h1, h3 {
     display: grid;
     grid-template-columns: repeat(3, 25%);
     grid-gap: 2rem;
+}
+
+.icons-container {
+    width: 55px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .articulo {
@@ -176,7 +182,7 @@ h1, h3 {
     align-items: center;
     margin-top: 5rem; 
     height: 20rem;
-    background-color: var(--secundaryColor);
+    background-color: var(--primaryColor);
 }
 .social-media-icon {
     display: flex;
@@ -195,3 +201,44 @@ h1, h3 {
     color: var(--complementaryColorWhite);
     font-size: 1.8rem;
 }
+
+/* Login */
+.formulario {
+    background: #eee;
+    padding: 5rem;
+}
+.form-signin {
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 33rem;
+    margin: auto;
+    padding: 1.5rem;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.title {
+    text-align: center;
+    font-size: 3rem;
+}
+.footer-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    background-color: var(--primaryColor);
+}
+.btn-primary{
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+.btn-primary:hover{
+    background-color: #3E9533;
+    border-color: #3E9533;
+}
+
