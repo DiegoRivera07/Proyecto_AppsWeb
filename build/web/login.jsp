@@ -43,23 +43,21 @@
                             <i class="fas fa-user"></i>
                         </a>
                     </div>
-                </div>
-                <div class="usuarios"> <!-- nuevo div -->
-                <div class="usuarios-container">
-                    <p class="nombre-usuario">Bienvenido</p>
-                    <button class="btn-cerrar">Cerrar sesión</button>
-                </div>
-            </div>  
+                </div>  
             </div>
         </header>
 
         <div class="formulario-login">
             <form class="form-signin">
                 <h1 class="h3 mb-3 font-weight-normal title">Iniciar Sesión</h1>
-                <label for="inputEmail" class="sr-only">Correo</label>
-                <input type="email" id="inputEmail" name="txtEmail" class="form-control campo" placeholder="Correo Electrónico" required autofocus="">
-                <label for="inputPassword" class="sr-only">Contraseña</label>
-                <input type="password" id="inputPassword" name="txtContra" class="form-control mb-4 campo" placeholder="Contraseña" required>
+                <div class="form-group">
+                    <label for="inputEmail" class="sr-only">Correo</label>
+                    <input type="email" id="inputEmail" name="txtEmail" class="form-control campo" placeholder="Correo Electrónico" required autofocus="">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="sr-only">Contraseña</label>
+                    <input type="password" id="inputPassword" name="txtContra" class="form-control mb-4 campo" placeholder="Contraseña" required>
+                </div>
                 <%
                     if (request.getParameter("btnIngresar") != null) {
                         Operaciones op = new Operaciones();
@@ -100,7 +98,7 @@
         <footer class="footer-login">
             <div class="social-media-icon">
                 <a href="https://www.facebook.com/gamesplazaobregon/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                <p>&copy Games Plaza 2019. Todos los derechos reservados.</p>
+                <p>&copy; Games Plaza 2019. Todos los derechos reservados.</p>
             </div>
 
         </footer>
