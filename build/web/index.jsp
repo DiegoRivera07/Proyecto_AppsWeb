@@ -2,6 +2,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
+<%
+    HttpSession sesion = request.getSession();
+    if (sesion.getAttribute("nombre") != null) {
+        out.write("<div> Hola, "+ sesion.getAttribute("nombre").toString() +"</div>");
+        out.write("<div><a href=\"cerrarSesion.jsp\">CERRAR SESIÓN</a></div>");
+        
+    }
+%>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
