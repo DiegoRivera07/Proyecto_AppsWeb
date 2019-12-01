@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="icon" href="img/logo.png" type="image/icon">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
