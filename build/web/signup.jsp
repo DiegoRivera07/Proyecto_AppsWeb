@@ -42,7 +42,7 @@
                     </a>
                 </div>
             </div> 
-            <div class="usuarios">
+            <div class="usuarios"> <!-- nuevo div -->
                 <div class="usuarios-container">
                     <p class="nombre-usuario">Bienvenido</p>
                     <button class="btn-cerrar">Cerrar sesión</button>
