@@ -57,6 +57,22 @@ h3 {
     color: var(--secundaryColor);
 }
 
+.usuarios-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 205px;
+}
+.usuarios-container p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.btn-cerrar {
+    background: white;
+    border: 0px;
+}
+
 /* Hero section */
 .hero {
     display: flex;
@@ -241,7 +257,15 @@ h3 {
     background-color: #3E9533;
     border-color: #3E9533;
 }
-.formulario-login a {
+.form-signin a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 1rem;
+}
+/*Signup*/
 
+.form-margin{
+    margin-bottom: 3.5rem;
 }
 

@@ -46,13 +46,7 @@
         <label for="inputEmail" class="sr-only">Correo</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="">
-
-        <div class="checkbox mb-3 text-center">
-            <label>
-                <input type="checkbox" value="remember-me"> Recuerdame
-            </label>
-        </div>
+        <input type="password" id="inputPassword" class="form-control form-margin" placeholder="Contraseña" required="">
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
 
