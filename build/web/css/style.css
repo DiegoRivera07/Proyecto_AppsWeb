@@ -29,6 +29,7 @@ h3 {
 }
 /* Header Section */
 .header {
+    background: white;
     margin: 5px;
     max-width: 100%;
 }
@@ -47,15 +48,21 @@ h3 {
     font-size: 1.8rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--primaryColor);
+    color: var(--secundaryColor);
 }
 .site-nav nav a:hover {
-    color: var(--secundaryColor);
+    transition: 0.2s;
+    color: var(--primaryColor);
 }
 
 .icons a i {
     color: var(--secundaryColor);
 }
+.icons a i:hover {
+    transition: 0.2s;
+    color: var(--primaryColor);
+}
+
 
 .usuarios-container {
     display: flex;
@@ -198,7 +205,7 @@ h3 {
     align-items: center;
     margin-top: 5rem; 
     height: 20rem;
-    background-color: var(--primaryColor);
+    background-color: var(--secundaryColor);
 }
 .social-media-icon {
     display: flex;
@@ -223,6 +230,7 @@ h3 {
     background: #eee;
     padding: 5rem;
 }
+
 .form-signin {
     background: white;
     border-radius: 5px;
@@ -247,7 +255,7 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 20rem;
-    background-color: var(--primaryColor);
+    background-color: var(--secundaryColor);
 }
 .btn-primary{
     background-color: var(--primaryColor);

@@ -41,17 +41,16 @@
 
     <div class="formulario-login">
         <form class="form-signin">
-        <img class="mb-4" src="img/logo_control.png" width="305px" alt="">
-        <h1 class="h3 mb-3 font-weight-normal title">Iniciar Sesión</h1>
-        <label for="inputEmail" class="sr-only">Correo</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" id="inputPassword" class="form-control form-margin" placeholder="Contraseña" required="">
+            <h1 class="h3 mb-3 font-weight-normal title">Iniciar Sesión</h1>
+            <label for="inputEmail" class="sr-only">Correo</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control form-margin" placeholder="Contraseña" required="">
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
 
-        <a href="signup.jsp">¿No tienes una cuenta?</a>
-    </form>
+            <a href="signup.jsp">¿No tienes una cuenta?</a>
+        </form>
 
     </div>
     

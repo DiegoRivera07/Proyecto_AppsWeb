@@ -20,6 +20,9 @@ body {
 h1, h2 {
     margin: 0;
 }
+i {
+    color: var(--primaryColor);
+}
 
 
 .cuerpo {
@@ -27,7 +30,7 @@ h1, h2 {
 }
 
 .cuerpo .contacto {
-    background: #585856;
+    background: #eee;
     width: 100%
 }
 
@@ -40,7 +43,7 @@ h1, h2 {
     padding: 75px 0;
     text-align: center;
     font-size: 35px;
-    color: #fff;
+    color: black;
 }
 
 .cuerpo .contacto .contenedor-contacto {
@@ -106,18 +109,18 @@ h1, h2 {
 .cuerpo .contacto .contenedor-contacto .formulario .enviar {
     width: 150px;
     font-size: 16px;
-    background: #49A43D;
+    background: var(--primaryColor);
     color: #fff;
     cursor: pointer;
 }
 
 .cuerpo .contacto .contenedor-contacto .formulario .enviar:hover {
-    background: #55C047;
+    background: #3E9533;
 }
 
 .cuerpo .informacion {
     width: 40%;
-    color: #fff;
+    color: black;
 }
 .cuerpo .informacion p {
     width: 100%;
@@ -139,8 +142,10 @@ h1, h2 {
 }
 
 
+
+
 footer .redessociales{
-    background: #49A43D;
+    background: var(--secundaryColor);
 }
 
 footer .redessociales .contenedor{
@@ -177,4 +182,7 @@ footer .redessociales .contenedor .facebook:hover{
 footer .redessociales .contenedor .youtube:hover{
     /*background: #cd201f;*/
     background: #ff4500;
+}
+.fa-facebook-square{
+    color: white;
 }

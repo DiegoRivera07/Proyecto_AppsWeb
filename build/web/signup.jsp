@@ -47,22 +47,21 @@
 
     <div class="formulario-login">
         <form class="form-signin">
-        <img class="mb-4" src="img/logo_control.png" width="305px" alt="">
-        <h1 class="h3 mb-3 font-weight-normal title">Registro</h1>
-        <label for="inputFirstName" class="sr-only">Nombre</label>
-        <input type="email" id="inputFirstName" class="form-control" placeholder="Nombre(s)" required="" autofocus="">
-        <label for="inputLastName" class="sr-only">Apellidos</label>
-        <input type="password" id="inputLastName" class="form-control" placeholder="Apellido(s)" required="">
+            <h1 class="h3 mb-3 font-weight-normal title">Registro</h1>
+            <label for="inputFirstName" class="sr-only">Nombre</label>
+            <input type="email" id="inputFirstName" class="form-control" placeholder="Nombre(s)" required="" autofocus="">
+            <label for="inputLastName" class="sr-only">Apellidos</label>
+            <input type="password" id="inputLastName" class="form-control" placeholder="Apellido(s)" required="">
 
-        <label for="inputEmail" class="sr-only">Correo</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required="" autofocus="">
-        <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" id="inputPassword" class="form-control form-margin" placeholder="Contraseña" required="">
+            <label for="inputEmail" class="sr-only">Correo</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Contraseña</label>
+            <input type="password" id="inputPassword" class="form-control form-margin" placeholder="Contraseña" required="">
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarme</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Registrarme</button>
 
         <a href="login.jsp">¿Ya tienes una cuenta?</a>
-    </form>
+        </form>
 
     </div>
     
