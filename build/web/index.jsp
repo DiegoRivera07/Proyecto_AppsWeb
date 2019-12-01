@@ -59,7 +59,7 @@
 
     <div class="productos">
 
-        <h2>Productos</h2>
+        <h3>Productos</h3>
 
         <div class="lista-productos contenedor">
             <div class="articulo funkos">
