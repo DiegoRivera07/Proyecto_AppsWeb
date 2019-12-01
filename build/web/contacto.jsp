@@ -27,13 +27,18 @@
                     <a href="index.jsp">Inicio</a>
                     <a href="#">Productos</a>
                     <a href="#">Galería</a>
-                    <a href="#">Contacto</a>
+                    <a href="contacto.jsp">Contacto</a>
                 </nav>
             </div>
             <div class="icons">
-                <a href="#">
-                    <i class="fas fa-shopping-cart"></i>
-                </a>
+                <div class="icons-container">
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="login.jsp">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
             </div>  
         </div>
     </header>

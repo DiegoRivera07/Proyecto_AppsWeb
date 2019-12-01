@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <div class="formulario">
+    <div class="formulario-login">
         <form class="form-signin">
         <img class="mb-4" src="img/logo_control.png" width="305px" alt="">
         <h1 class="h3 mb-3 font-weight-normal title">Iniciar Sesión</h1>
@@ -55,6 +55,8 @@
         </div>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button>
+
+        <a href="signup.jsp">¿No tienes una cuenta?</a>
     </form>
 
     </div>
