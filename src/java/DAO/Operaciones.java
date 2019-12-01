@@ -73,5 +73,32 @@ public class Operaciones {
         }
         return existe;
     }
-
+    
+    public boolean registrarUsuario(String nombre, String apellido, String correo, String contra) {
+        if (nombre == null || apellido == null || correo == null || contra == null) {
+            return false;
+        }
+        try {
+            Connection conn;
+            PreparedStatement ps;
+            String sql = "INSERT INTO usuarios (nombre,apellido,correo,contra,nivel) "
+                    + "VALUES(?,?,?,?,?);";
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection(this.jdbcURL, this.jdbcUsername, this.jdbcPassword);
+            ps = conn.prepareCall(sql);
+            ps.setString(1, nombre);
+            ps.setString(2, apellido);
+            ps.setString(3, correo);
+            ps.setString(4, contra);
+            ps.setInt(5, 2);
+            ps.executeUpdate();
+            conn.close();
+            System.out.println("Se registró el correo " + correo);
+            return true;
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
 }
