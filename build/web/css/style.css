@@ -228,7 +228,7 @@ h3 {
 /* Login */
 .formulario-login {
     background: #eee;
-    padding: 5rem;
+    padding: 15rem;
 }
 
 .form-signin {
@@ -276,4 +276,9 @@ h3 {
 .form-margin{
     margin-bottom: 3.5rem;
 }
+.formulario-signin{
+    background: #eee;
+    padding: 10rem;
+}
+
 

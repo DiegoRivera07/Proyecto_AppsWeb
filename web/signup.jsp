@@ -41,11 +41,17 @@
                         <i class="fas fa-user"></i>
                     </a>
                 </div>
-            </div>  
+            </div> 
+            <div class="usuarios">
+                <div class="usuarios-container">
+                    <p class="nombre-usuario">Bienvenido</p>
+                    <button class="btn-cerrar">Cerrar sesión</button>
+                </div>
+            </div> 
         </div>
     </header>
 
-    <div class="formulario-login">
+    <div class="formulario-signin">
         <form class="form-signin">
             <h1 class="h3 mb-3 font-weight-normal title">Registro</h1>
             <label for="inputFirstName" class="sr-only">Nombre</label>
