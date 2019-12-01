@@ -27,7 +27,7 @@ HttpSession sesion = request.getSession();
             <div class="site-nav">
                 <nav>
                     <a href="index.jsp">Inicio</a>
-                    <a href="#">Productos</a>
+                    <a href="productos.jsp">Productos</a>
                     <a href="#">Galería</a>
                     <a href="contacto.jsp">Contacto</a>
                 </nav>
