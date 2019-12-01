@@ -43,7 +43,13 @@
                             <i class="fas fa-user"></i>
                         </a>
                     </div>
-                </div>  
+                </div>
+                <div class="usuarios">
+                <div class="usuarios-container">
+                    <p class="nombre-usuario">Bienvenido</p>
+                    <button class="btn-cerrar">Cerrar sesión</button>
+                </div>
+            </div>  
             </div>
         </header>
 
