@@ -46,5 +46,32 @@ public class Operaciones {
         return usuario;
 
     }
+    
+    public boolean existe(String correo){
+        Connection conn;
+        PreparedStatement ps;
+        ResultSet rs;
+        boolean existe = false;
+        String sql = "SELECT correo FROM usuarios WHERE correo = '" + correo + "';";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection(this.jdbcURL, this.jdbcUsername, this.jdbcPassword);
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                existe = true;
+            } else {
+                existe = false;
+            }
+            
+            conn.close();
+            System.out.println("El correo del usuario " + (existe?"ya existe":"está disponible"));
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return existe;
+    }
 
 }

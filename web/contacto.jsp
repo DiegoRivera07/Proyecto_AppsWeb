@@ -1,7 +1,8 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
+<%
+HttpSession sesion = request.getSession();
+%>
 <html>
 <head>
     <title>Games Plaza</title>
@@ -11,7 +12,9 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="icon" href="img/logo.png" type="image/icon">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <header class="header">
@@ -39,12 +42,27 @@
                     </a>
                 </div>
             </div>
-            <div class="usuarios"> <!-- nuevo div -->
-                <div class="usuarios-container">
-                    <p class="nombre-usuario">Bienvenido</p>
-                    <button class="btn-cerrar">Cerrar sesión</button>
-                </div>
-            </div>  
+            <%
+                if (sesion.getAttribute("nombre") != null) {
+                    out.write(
+                            "<div class=\"usuarios\">"+
+                                "<div class=\"usuarios-container\">"+
+                                    "<p class=\"nombre-usuario\">Hola, "+ sesion.getAttribute("nombre").toString() +"</p>"+
+                                    "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='cerrarSesion.jsp'\"> Cerrar sesión </button>"+
+                                "</div>"+
+                            "</div>");
+                } else {
+                    out.write(
+                            "<div class=\"usuarios\">"+
+                                "<div class=\"usuarios-container\">"+
+                                    "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='login.jsp'\"> Iniciar sesión </button>"+
+                                    "<button class=\"btn-cerrar text-secondary\" onclick=\"location.href='signup.jsp'\"> Registrarse </button>"+
+                                "</div>"+
+                            "</div>");
+
+                }
+
+                %>
         </div>
     </header>
 
