@@ -56,6 +56,7 @@
                                 "<div class=\"usuarios\">"+
                                     "<div class=\"usuarios-container\">"+
                                         "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='login.jsp'\"> Iniciar sesión </button>"+
+                                        "<button class=\"btn-cerrar text-secondary\" onclick=\"location.href='signup.jsp'\"> Registrarse </button>"+
                                     "</div>"+
                                 "</div>");
                         
