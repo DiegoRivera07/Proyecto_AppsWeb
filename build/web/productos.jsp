@@ -1,13 +1,11 @@
-<%-- 
-    Document   : productos
-    Created on : 30/11/2019, 11:19:52 PM
-    Author     : joser
---%>
-
+<%@page import="DAO.Operaciones"%>
+<%@page import="model.Producto"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
     HttpSession sesion = request.getSession();
+    boolean hayUsuario = sesion.getAttribute("nombre") != null;
 %>
 <html>
     <head>
@@ -48,7 +46,7 @@
                     </div>
                 </div>
                 <%
-                    if (sesion.getAttribute("nombre") != null) {
+                    if (hayUsuario) {
                         out.write(
                                 "<div class=\"usuarios\">"
                                 + "<div class=\"usuarios-container\">"
@@ -73,158 +71,49 @@
 
         <div class="container">
             <div style="width: 300px; margin-left: auto;">
-                <form action="" method="POST">
+                <form>
                     <div class="input-group">
-                        <select class="custom-select" id="inputGroupSelect04">
-                            <option selected>Elegir categoría</option>
-                            <option value="Accesorios">Accesorios</option>
-                            <option value="Video">Video juegos</option>
-                            <option value="Figuras">Figuras</option>
-                            <option value="Consolas">Consolas</option>
-                            <option value="Peluches">Peluches</option>
-                            <option value="Mochilas">Mochilas</option>
+                        <select class="custom-select" name="cat" id="inputGroupSelect04">
+                            <option selected value="todos">Elegir categoría</option>
+                            <option value="ac">Accesorios</option>
+                            <option value="vj">Video juegos</option>
+                            <option value="fg">Figuras</option>
+                            <option value="cn">Consolas</option>
+                            <option value="pl">Peluches</option>
+                            <option value="mc">Mochilas</option>
                         </select>
                         <div class="input-group-append">
-                            <input class="btn btn-outline-secondary" type="submit" name="filtro" value="Filtrar"></input>
+                            <input class="btn btn-outline-secondary" type="submit" value="Filtrar">
                         </div>
                     </div>
                 </form>
             </div>
-
             <div class="row mt-4">
                 <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-3">
-                        <a class="product-thumb" href="#"><img src="img/vj/fifa20.png" alt="FIFA20"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">FIFA 20</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$890</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/codmw.png" alt="Call of duty modern warfare"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">Call of duty modern warfare</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$1190</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/wwe.png" alt="WWE2k20"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">WWE 2k20</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$1190</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/gow.png" alt="God of war"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">God of war</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$490</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/luigimansion.png" alt="Luigi mansion 3"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">Luigi mansion 3</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>
-                            <span class="product-price">$1290</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/spiderman.png" alt="Spiderman"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">Spiderman</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>
-                            <span class="product-price">$490</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/apex.png" alt="APEX legends"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">APEX legends</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>
-                            <span class="product-price">$490</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/dragonball.png" alt="Dragon ball kakarot"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">Dragon ball kakarot</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">
-                                $1190</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product-->
-                <div class="col-lg-4 col-sm-6 mb-30 d-none d-lg-block">
-                    <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/vj/videojuegos.jpg" alt="Borderlands 3"></a>
-                        <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
-                            <h5 class="product-title"><a href="#">Borderlands 3</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$1190</span>
-                        </div>
-                        <div class="product-buttons-wrap">
-                            <div class="product-buttons">
-                                <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <%                  
+                    Operaciones op = new Operaciones();
+                    List<Producto> productos = null;
+                    String categoria = request.getParameter("cat");
+                    if(categoria==null || categoria.equalsIgnoreCase("todos")){
+                        productos = op.listaProductos();
+                    } else {
+                        productos = op.listaProductos(categoria);
+                    }
+                    for (Producto producto : productos) {
+                        out.write(
+                                "<div class=\"col-lg-4 col-sm-6 mb-30\"> <div class=\"product-card mx-auto mb-3\">"
+                                + "<a class=\"product-thumb\" href=\"#\"><img src=\"" + producto.getImgURL() + "\"></a>"
+                                + "<div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">" + producto.getNombreCategoria() + "</a>"
+                                + "<h5 class=\"product-title\"><a href=\"#\">" + producto.getNombre() + "</a></h5>"
+                                + "<p> " + producto.getDescripcion()
+                                + "<span class=\"product-price\"> $ " + String.format("%.2f", producto.getPrecio()) + " </span>"
+                                + "</div>"
+                                + "<div class=\"product-buttons-wrap\"> <div class=\"product-buttons\"> "
+                                + "<div class=\"product-button\"> <a href=\"" + (hayUsuario ? "carrito.jsp" : "login.jsp") + "\">Añadir al carrito </a></div> "
+                                + "</div></div></div></div>");
+
+                    }
+                %>
             </div>
         </div>
         <footer class="footer">
