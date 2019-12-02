@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import model.Producto;
 import model.Usuario;
 
 public class Operaciones {
@@ -99,6 +102,83 @@ public class Operaciones {
             e.printStackTrace();
         }
         return false;
+    }
+    
+    public List<Producto> listaProductos() {
+        List<Producto> productos = new ArrayList<>();
+        Connection conn;
+        PreparedStatement ps;
+        ResultSet rs;
+        Producto producto = null;
+        String sql = "SELECT P.id, P.nombre, P.descripcion, P.precio, P.stock, P.imagen, P.idCategoria, C.nombre "
+                + "FROM productos P "
+                + "INNER JOIN categorias C "
+                + "ON P.idCategoria = C.id;";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection(this.jdbcURL, this.jdbcUsername, this.jdbcPassword);
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String descripcion = rs.getString(3);
+                float precio = rs.getFloat(4);
+                int stock = rs.getInt(5);
+                String imagen = rs.getString(6);
+                String idCategoria = rs.getString(7);
+                String nombreCategoria = rs.getString(8);
+                producto = new Producto(id, nombre, descripcion, precio, stock, imagen, idCategoria, nombreCategoria);
+                productos.add(producto);
+            }
+
+            conn.close();
+            System.out.println("Cantidad de productos encontrados: " + productos.size() + "");
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return productos;
+    }
+
+    public List<Producto> listaProductos(String categoria) {
+        List<Producto> productos = new ArrayList<>();
+        Connection conn;
+        PreparedStatement ps;
+        ResultSet rs;
+        Producto producto = null;
+        String sql = "SELECT P.id, P.nombre, P.descripcion, P.precio, P.stock, P.imagen, P.idCategoria, C.nombre "
+                + "FROM productos P "
+                + "INNER JOIN categorias C "
+                + "ON P.idCategoria = C.id "
+                + "WHERE C.id = '" + categoria + "';";
+        System.out.println(sql);
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection(this.jdbcURL, this.jdbcUsername, this.jdbcPassword);
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String descripcion = rs.getString(3);
+                float precio = rs.getFloat(4);
+                int stock = rs.getInt(5);
+                String imagen = rs.getString(6);
+                String idCategoria = rs.getString(7);
+                String nombreCategoria = rs.getString(8);
+                producto = new Producto(id, nombre, descripcion, precio, stock, imagen, idCategoria, nombreCategoria);
+                productos.add(producto);
+            }
+
+            conn.close();
+            System.out.println("Cantidad de productos encontrados: " + productos.size() + "");
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        return productos;
+
     }
     
 }
