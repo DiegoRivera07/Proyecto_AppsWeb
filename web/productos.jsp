@@ -68,52 +68,54 @@
                 %>
             </div>
         </header>
-
-        <div class="container">
-            <div style="width: 300px; margin-left: auto;">
-                <form>
-                    <div class="input-group">
-                        <select class="custom-select" name="cat" id="inputGroupSelect04">
-                            <option selected value="todos">Elegir categoría</option>
-                            <option value="ac">Accesorios</option>
-                            <option value="vj">Video juegos</option>
-                            <option value="fg">Figuras</option>
-                            <option value="cn">Consolas</option>
-                            <option value="pl">Peluches</option>
-                            <option value="mc">Mochilas</option>
-                        </select>
-                        <div class="input-group-append">
-                            <input class="btn btn-outline-secondary" type="submit" value="Filtrar">
+        <div class="container-fluid bg-light"> 
+            <div class="container">
+                <div class="py-5" style="width: 300px; margin-left: auto;">
+                    <form>
+                        <div class="input-group">
+                            <select class="custom-select" name="cat" id="inputGroupSelect04">
+                                <option disabled selected value="todos">Elegir categoría</option>
+                                <option value="todos">Mostrar todos</option>
+                                <option value="ac">Accesorios</option>
+                                <option value="vj">Video juegos</option>
+                                <option value="fg">Figuras</option>
+                                <option value="cn">Consolas</option>
+                                <option value="pl">Peluches</option>
+                                <option value="mc">Mochilas</option>
+                            </select>
+                            <div class="input-group-append">
+                                <input class="btn btn-outline-secondary" type="submit" value="Filtrar">
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-            <div class="row mt-4">
-                <!-- Product-->
-                <%                  
-                    Operaciones op = new Operaciones();
-                    List<Producto> productos = null;
-                    String categoria = request.getParameter("cat");
-                    if(categoria==null || categoria.equalsIgnoreCase("todos")){
-                        productos = op.listaProductos();
-                    } else {
-                        productos = op.listaProductos(categoria);
-                    }
-                    for (Producto producto : productos) {
-                        out.write(
-                                "<div class=\"col-lg-4 col-sm-6 mb-30\"> <div class=\"product-card mx-auto mb-3\">"
-                                + "<a class=\"product-thumb\" href=\"#\"><img src=\"" + producto.getImgURL() + "\"></a>"
-                                + "<div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">" + producto.getNombreCategoria() + "</a>"
-                                + "<h5 class=\"product-title\"><a href=\"#\">" + producto.getNombre() + "</a></h5>"
-                                + "<p> " + producto.getDescripcion()
-                                + "<span class=\"product-price\"> $ " + String.format("%.2f", producto.getPrecio()) + " </span>"
-                                + "</div>"
-                                + "<div class=\"product-buttons-wrap\"> <div class=\"product-buttons\"> "
-                                + "<div class=\"product-button\"> <a href=\"" + (hayUsuario ? "carrito.jsp" : "login.jsp") + "\">Añadir al carrito </a></div> "
-                                + "</div></div></div></div>");
+                    </form>
+                </div>
+                <div class="row">
+                    <!-- Product-->
+                    <%                  
+                        Operaciones op = new Operaciones();
+                        List<Producto> productos = null;
+                        String categoria = request.getParameter("cat");
+                        if(categoria==null || categoria.equalsIgnoreCase("todos")){
+                            productos = op.listaProductos();
+                        } else {
+                            productos = op.listaProductos(categoria);
+                        }
+                        for (Producto producto : productos) {
+                            out.write(
+                                    "<div class=\"col-lg-4 col-sm-6 mb-5\"> <div class=\"product-card mx-auto mb-3\">"
+                                    + "<a class=\"product-thumb\" href=\"#\"><img src=\"" + producto.getImgURL() + "\"></a>"
+                                    + "<div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">" + producto.getNombreCategoria() + "</a>"
+                                    + "<h5 class=\"product-title\"><a href=\"#\">" + producto.getNombre() + "</a></h5>"
+                                    + "<p> " + producto.getDescripcion()
+                                    + "<span class=\"product-price\"> $ " + String.format("%.2f", producto.getPrecio()) + " </span>"
+                                    + "</div>"
+                                    + "<div class=\"product-buttons-wrap\"> <div class=\"product-buttons\"> "
+                                    + "<div class=\"product-button border border-success\"> <a href=\"" + (hayUsuario ? "carrito.jsp" : "login.jsp") + "\">Añadir al carrito </a></div> "
+                                    + "</div></div></div></div>");
 
-                    }
-                %>
+                        }
+                    %>
+                </div>
             </div>
         </div>
         <footer class="footer">
