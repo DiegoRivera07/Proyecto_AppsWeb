@@ -780,6 +780,10 @@ i {
     background-color: #3E9533;
     border-color: #3E9533;
 }
+.btn-primary:active{
+    background-color: #585856;
+    border-color: #585856;
+}
 .form-signin a {
     text-align: center;
     display: inline-block;

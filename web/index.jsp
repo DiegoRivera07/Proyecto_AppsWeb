@@ -88,27 +88,27 @@
             <div class="lista-productos contenedor">
                 <div class="articulo funkos">
                     <a href="#">Funkos</a>
-                    <img src="img/funkos.jpg" alt="Funkos">
+                    <img src="img/fg/funkos.jpg" alt="Funkos">
                 </div>
                 <div class="articulo accesorios">
                     <a href="#">Accesorios</a>
-                    <img src="img/accesorios.jpg" alt="Accesorios">
+                    <img src="img/ac/accesorios.jpg" alt="Accesorios">
                 </div>
                 <div class="articulo peluche">
                     <a href="#">Peluches</a>
-                    <img src="img/peluches.jpg" alt="Peluches">
+                    <img src="img/pl/peluches.jpg" alt="Peluches">
                 </div>
                 <div class="articulo consolas">
                     <a href="#">Consolas</a>
-                    <img src="img/consolas.jpg" alt="Consolas">
+                    <img src="img/cn/consolas.jpg" alt="Consolas">
                 </div>
                 <div class="articulo videojuego">
                     <a href="#">Videojuegos</a>
-                    <img src="img/videojuegos.jpg" alt="Videojuegos">
+                    <img src="img/vj/videojuegos.jpg" alt="Videojuegos">
                 </div>
                 <div class="articulo mochilas">
                     <a href="#">Mochilas</a>
-                    <img src="img/mochilas.jpg" alt="Mochilas">
+                    <img src="img/mc/mochilas.jpg" alt="Mochilas">
                 </div>
             </div>
         </div>

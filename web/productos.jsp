@@ -50,33 +50,52 @@
                 <%
                     if (sesion.getAttribute("nombre") != null) {
                         out.write(
-                                "<div class=\"usuarios\">"+
-                                    "<div class=\"usuarios-container\">"+
-                                        "<p class=\"nombre-usuario\">Hola, "+ sesion.getAttribute("nombre").toString() +"</p>"+
-                                        "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='cerrarSesion.jsp'\"> Cerrar sesión </button>"+
-                                    "</div>"+
-                                "</div>");
+                                "<div class=\"usuarios\">"
+                                + "<div class=\"usuarios-container\">"
+                                + "<p class=\"nombre-usuario\">Hola, " + sesion.getAttribute("nombre").toString() + "</p>"
+                                + "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='cerrarSesion.jsp'\"> Cerrar sesión </button>"
+                                + "</div>"
+                                + "</div>");
                     } else {
                         out.write(
-                                "<div class=\"usuarios\">"+
-                                    "<div class=\"usuarios-container\">"+
-                                        "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='login.jsp'\"> Iniciar sesión </button>"+
-                                        "<button class=\"btn-cerrar text-secondary\" onclick=\"location.href='signup.jsp'\"> Registrarse </button>"+
-                                    "</div>"+
-                                "</div>");
-                        
+                                "<div class=\"usuarios\">"
+                                + "<div class=\"usuarios-container\">"
+                                + "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='login.jsp'\"> Iniciar sesión </button>"
+                                + "<button class=\"btn-cerrar text-secondary\" onclick=\"location.href='signup.jsp'\"> Registrarse </button>"
+                                + "</div>"
+                                + "</div>");
+
                     }
 
                 %>
             </div>
         </header>
-        
+
         <div class="container">
-            <div class="row">
+            <div style="width: 300px; margin-left: auto;">
+                <form action="" method="POST">
+                    <div class="input-group">
+                        <select class="custom-select" id="inputGroupSelect04">
+                            <option selected>Elegir categoría</option>
+                            <option value="Accesorios">Accesorios</option>
+                            <option value="Video">Video juegos</option>
+                            <option value="Figuras">Figuras</option>
+                            <option value="Consolas">Consolas</option>
+                            <option value="Peluches">Peluches</option>
+                            <option value="Mochilas">Mochilas</option>
+                        </select>
+                        <div class="input-group-append">
+                            <input class="btn btn-outline-secondary" type="submit" name="filtro" value="Filtrar"></input>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row mt-4">
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-3">
-                        <a class="product-thumb" href="#"><img src="img/fifa20.png" alt="FIFA20"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/fifa20.png" alt="FIFA20"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">FIFA 20</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$890</span>
                         </div>
@@ -90,7 +109,7 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/codmw.png" alt="Call of duty modern warfare"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/codmw.png" alt="Call of duty modern warfare"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">Call of duty modern warfare</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$1190</span>
                         </div>
@@ -104,7 +123,7 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/wwe.png" alt="WWE2k20"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/wwe.png" alt="WWE2k20"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">WWE 2k20</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$1190</span>
                         </div>
@@ -118,7 +137,7 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/gow.png" alt="God of war"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/gow.png" alt="God of war"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">God of war</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$490</span>
                         </div>
@@ -132,7 +151,7 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/luigimansion.png" alt="Luigi mansion 3"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/luigimansion.png" alt="Luigi mansion 3"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">Luigi mansion 3</a></h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>
@@ -148,7 +167,7 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/spiderman.png" alt="Spiderman"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/spiderman.png" alt="Spiderman"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">Spiderman</a></h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>
@@ -164,14 +183,14 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/apex.png" alt="APEX legends"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/apex.png" alt="APEX legends"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">APEX legends</a></h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>
                             <span class="product-price">$490</span>
                         </div>
                         <div class="product-buttons-wrap">
-                           <div class="product-buttons">
+                            <div class="product-buttons">
                                 <div class="product-button"><a href="#" >Añadir al carrito</i></a></div>
                             </div>
                         </div>
@@ -180,7 +199,7 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/dragonball.png" alt="Dragon ball kakarot"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/dragonball.png" alt="Dragon ball kakarot"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">Dragon ball kakarot</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">
                                 $1190</span>
@@ -195,7 +214,7 @@
                 <!-- Product-->
                 <div class="col-lg-4 col-sm-6 mb-30 d-none d-lg-block">
                     <div class="product-card mx-auto mb-5">
-                        <a class="product-thumb" href="#"><img src="img/videojuegos.jpg" alt="Borderlands 3"></a>
+                        <a class="product-thumb" href="#"><img src="img/vj/videojuegos.jpg" alt="Borderlands 3"></a>
                         <div class="product-card-body"><a class="product-meta" href="#">Video juego</a>
                             <h5 class="product-title"><a href="#">Borderlands 3</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class="product-price">$1190</span>
                         </div>
@@ -214,7 +233,7 @@
                 <p>&copy Games Plaza 2019. Todos los derechos reservados.</p>
             </div>
         </footer>
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.10.0/feather.js"></script>
         <script src="https://kit.fontawesome.com/90570fcca5.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -91,36 +91,50 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
 
                     if (sesion.getAttribute("nombre") != null) {
                         out.write(
-                                "<div class=\"usuarios\">"+
-                                    "<div class=\"usuarios-container\">"+
-                                        "<p class=\"nombre-usuario\">Hola, "+ sesion.getAttribute("nombre").toString() +"</p>"+
-                                        "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='cerrarSesion.jsp'\"> Cerrar sesión </button>"+
-                                    "</div>"+
-                                "</div>");
+                                "<div class=\"usuarios\">"
+                                + "<div class=\"usuarios-container\">"
+                                + "<p class=\"nombre-usuario\">Hola, " + sesion.getAttribute("nombre").toString() + "</p>"
+                                + "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='cerrarSesion.jsp'\"> Cerrar sesión </button>"
+                                + "</div>"
+                                + "</div>");
                     } else {
                         out.write(
-                                "<div class=\"usuarios\">"+
-                                    "<div class=\"usuarios-container\">"+
-                                        "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='login.jsp'\"> Iniciar sesión </button>"+
-                                        "<button class=\"btn-cerrar text-secondary\" onclick=\"location.href='signup.jsp'\"> Registrarse </button>"+
-                                    "</div>"+
-                                "</div>");
-                        
+                                "<div class=\"usuarios\">"
+                                + "<div class=\"usuarios-container\">"
+                                + "<button class=\"btn btn-outline-secondary btn-lg\" onclick=\"location.href='login.jsp'\"> Iniciar sesión </button>"
+                                + "<button class=\"btn-cerrar text-secondary\" onclick=\"location.href='signup.jsp'\"> Registrarse </button>"
+                                + "</div>"
+                                + "</div>");
+
                     }
 
                 
       out.write("\n");
       out.write("            </div>\n");
       out.write("        </header>\n");
-      out.write("        \n");
+      out.write("\n");
       out.write("        <div class=\"container\">\n");
+      out.write("            <div class=\"container-input-group\">\n");
+      out.write("                <div class=\"input-group\">\n");
+      out.write("                    <select class=\"custom-select\" id=\"inputGroupSelect04\">\n");
+      out.write("                        <option selected>Choose...</option>\n");
+      out.write("                        <option value=\"1\">One</option>\n");
+      out.write("                        <option value=\"2\">Two</option>\n");
+      out.write("                        <option value=\"3\">Three</option>\n");
+      out.write("                    </select>\n");
+      out.write("                    <div class=\"input-group-append\">\n");
+      out.write("                        <button class=\"btn btn-outline-secondary\" type=\"button\">Button</button>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("\n");
       out.write("            <div class=\"row\">\n");
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-3\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/fifa20.png\" alt=\"FIFA20\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/fifa20.png\" alt=\"FIFA20\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">FIFA 20</a></h5><span class=\"product-price\">$890</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">FIFA 20</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class=\"product-price\">$890</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
       out.write("                            <div class=\"product-buttons\">\n");
@@ -132,9 +146,9 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/codmw.png\" alt=\"Call of duty modern warfare\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/codmw.png\" alt=\"Call of duty modern warfare\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Call of duty modern warfare</a></h5><span class=\"product-price\">$1190</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Call of duty modern warfare</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class=\"product-price\">$1190</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
       out.write("                            <div class=\"product-buttons\">\n");
@@ -146,9 +160,9 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/wwe.png\" alt=\"WWE2k20\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/wwe.png\" alt=\"WWE2k20\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">WWE 2k20</a></h5><span class=\"product-price\">$1190</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">WWE 2k20</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class=\"product-price\">$1190</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
       out.write("                            <div class=\"product-buttons\">\n");
@@ -160,9 +174,9 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/gow.png\" alt=\"God of war\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/gow.png\" alt=\"God of war\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">God of war</a></h5><span class=\"product-price\">$490</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">God of war</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class=\"product-price\">$490</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
       out.write("                            <div class=\"product-buttons\">\n");
@@ -174,9 +188,11 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/luigimansion.png\" alt=\"Luigi mansion 3\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/luigimansion.png\" alt=\"Luigi mansion 3\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Luigi mansion 3</a></h5><span class=\"product-price\">$1290</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Luigi mansion 3</a></h5>\n");
+      out.write("                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>\n");
+      out.write("                            <span class=\"product-price\">$1290</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
       out.write("                            <div class=\"product-buttons\">\n");
@@ -188,9 +204,11 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/spiderman.png\" alt=\"Spiderman\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/spiderman.png\" alt=\"Spiderman\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Spiderman</a></h5><span class=\"product-price\">$490</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Spiderman</a></h5>\n");
+      out.write("                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>\n");
+      out.write("                            <span class=\"product-price\">$490</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
       out.write("                            <div class=\"product-buttons\">\n");
@@ -202,12 +220,14 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/apex.png\" alt=\"APEX legends\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/apex.png\" alt=\"APEX legends\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">APEX legends</a></h5><span class=\"product-price\">$490</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">APEX legends</a></h5>\n");
+      out.write("                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p>\n");
+      out.write("                            <span class=\"product-price\">$490</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
-      out.write("                           <div class=\"product-buttons\">\n");
+      out.write("                            <div class=\"product-buttons\">\n");
       out.write("                                <div class=\"product-button\"><a href=\"#\" >Añadir al carrito</i></a></div>\n");
       out.write("                            </div>\n");
       out.write("                        </div>\n");
@@ -216,9 +236,9 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/dragonball.png\" alt=\"Dragon ball kakarot\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/dragonball.png\" alt=\"Dragon ball kakarot\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Dragon ball kakarot</a></h5><span class=\"product-price\">\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Dragon ball kakarot</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class=\"product-price\">\n");
       out.write("                                $1190</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
@@ -231,9 +251,9 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!-- Product-->\n");
       out.write("                <div class=\"col-lg-4 col-sm-6 mb-30 d-none d-lg-block\">\n");
       out.write("                    <div class=\"product-card mx-auto mb-5\">\n");
-      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/videojuegos.jpg\" alt=\"Borderlands 3\"></a>\n");
+      out.write("                        <a class=\"product-thumb\" href=\"#\"><img src=\"img/vj/videojuegos.jpg\" alt=\"Borderlands 3\"></a>\n");
       out.write("                        <div class=\"product-card-body\"><a class=\"product-meta\" href=\"#\">Video juego</a>\n");
-      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Borderlands 3</a></h5><span class=\"product-price\">$1190</span>\n");
+      out.write("                            <h5 class=\"product-title\"><a href=\"#\">Borderlands 3</a></h5><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, distinctio?</p><span class=\"product-price\">$1190</span>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"product-buttons-wrap\">\n");
       out.write("                            <div class=\"product-buttons\">\n");
@@ -250,7 +270,7 @@ public final class productos_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <p>&copy Games Plaza 2019. Todos los derechos reservados.</p>\n");
       out.write("            </div>\n");
       out.write("        </footer>\n");
-      out.write("        \n");
+      out.write("\n");
       out.write("        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.10.0/feather.js\"></script>\n");
       out.write("        <script src=\"https://kit.fontawesome.com/90570fcca5.js\" crossorigin=\"anonymous\"></script>\n");
       out.write("        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n");
